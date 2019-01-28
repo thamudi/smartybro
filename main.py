@@ -65,8 +65,8 @@ print('--- Getting Max number  --- ')
 last_pagination_num = get_last_pagination_num()
 print('--- Scraping links from SmartyBro --- ')
 print_progress_bar(0, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
-for page_num in range(0, last_pagination_num):
-# for page_num in range(0, 2):
+# for page_num in range(0, last_pagination_num):
+for page_num in range(0, 2):
     count += 1
     temp_scrapped_links.append(scrap_page_links('https://smartybro.com/page/'+str(page_num)+'/', 'h2', 'grid-tit'))
     print_progress_bar(count, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
