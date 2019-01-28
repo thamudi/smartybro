@@ -1,0 +1,13 @@
+https://www.udemy.com/complete-javascript-course-for-beginners-to-master-2019/?ranMID=39197&ranEAID=VkwVKCHWj2A&ranSiteID=VkwVKCHWj2A-RxAXougYjV28F3TashgkkQ&LSNPUBID=
+VkwVKCHWj2A
+
+https://click.linksynergy.com/deeplink?id=VkwVKCHWj2A&mid=39197&murl=https%3A%2F%2F.udemy.com%2Fcomplete-javascript-course-for-beginners-to-master-2019%2F
+
+extract  ranMID
+fromat to = mid
+
+extract id
+format to = 
+	- ranEAID
+	- ranSiteID
+	- LSNPUBID

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b745334c-85b7-4f5a-a115-2f92a5e7087a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="b745334c-85b7-4f5a-a115-2f92a5e7087a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +25,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+            <state relative-caret-position="441">
+              <caret line="31" column="69" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="69" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#107#522#0" />
-                <element signature="e#523#1386#0" />
                 <element signature="e#1446#1860#0" />
               </folding>
             </state>
@@ -120,7 +117,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.19242579" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.2446264" />
+      <window_info anchor="bottom" id="Terminal" weight="0.2446264" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -163,12 +160,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        <state relative-caret-position="441">
+          <caret line="31" column="69" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="69" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#107#522#0" />
-            <element signature="e#523#1386#0" />
             <element signature="e#1446#1860#0" />
           </folding>
         </state>
