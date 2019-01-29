@@ -12,7 +12,6 @@ def scrap_page_links(curr_url, tag, tag_class):
         else:
             x.append(header.find('a', href=True)['href'])
     return x
-    # return [header.find('a', href=True)['href'] for header in soup.findAll(tag, attrs={'class': tag_class})]
 
 
 # Print iterations progress
@@ -31,7 +30,9 @@ def print_progress_bar(iteration, total, prefix='', suffix='', decimals=1, lengt
     """
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filled_length = int(length * iteration // total)
-    bar = fill * filled_length + '-' * (length - filled_length)
+    bar = fill * filled_length + '-' * (
+
+        - filled_length)
     print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end='\r')
     # Print New Line on Complete
     if iteration == total:
@@ -52,24 +53,19 @@ def get_last_pagination_num():
     return max(numbers)
 
 
-def generate_udemy_url(ud_url):
-    unquote_url = requests.utils.unquote(ud_url)
-    return "link"
-
 # Main
 
 
-count = 0
 temp_scrapped_links = []
+print('---  ---- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- --- --- ')
 print('--- Getting Max number  --- ')
 last_pagination_num = get_last_pagination_num()
+print('---  ---- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- --- --- ')
 print('--- Scraping links from SmartyBro --- ')
 print_progress_bar(0, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
 for page_num in range(0, last_pagination_num):
-# for page_num in range(0, 2):
-    count += 1
     temp_scrapped_links.append(scrap_page_links('https://smartybro.com/page/'+str(page_num)+'/', 'h2', 'grid-tit'))
-    print_progress_bar(count, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
+    print_progress_bar(page_num+1, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
 
 flat_scrapped_links = [item for sublist in temp_scrapped_links for item in sublist]
 
@@ -78,11 +74,11 @@ print('---  ---- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 print('--- Scraping for Udemy links --- ')
 temp_scrapped_links = []
 count = 0
-print_progress_bar(0, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
+print_progress_bar(0, len(flat_scrapped_links), prefix='Progress:', suffix='Complete', length=50)
 for url in flat_scrapped_links:
     count += 1
     temp_scrapped_links.append(scrap_page_links(url, 'a', 'fasc-button'))
-    print_progress_bar(count, last_pagination_num, prefix='Progress:', suffix='Complete', length=50)
+    print_progress_bar(count, len(flat_scrapped_links), prefix='Progress:', suffix='Complete', length=50)
 
 flat_scrapped_links = [item for sublist in temp_scrapped_links for item in sublist]
 
@@ -92,12 +88,9 @@ print('--- Generating Udemy links --- ')
 file = open("all_links.txt", "w+")
 for brainy_link in flat_scrapped_links:
     file = open("all_links.txt", "a")
-    udemy_link = generate_udemy_url(brainy_link)
-    file.write(udemy_link + "\n")
+    file.write(brainy_link + "\n")
     file.close()
-
 print('--- Writing Udemy links Finished --- ')
-
-
+print('---  ---- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- --- --- ')
 
 
